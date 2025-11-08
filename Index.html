@@ -13,9 +13,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/mediaqueries.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/mediaqueries.css" />
     <title>Akinfemi</title>
   </head>
   <body>
@@ -57,46 +57,82 @@
           <a href="your-cv-link.pdf" class="btn btn-primary" download
             >Download CV</a
           >
-          <a href="#contact-section" class="btn btn-secondary">Contact</a>
+          <a href="#contact" class="btn btn-secondary">Contact</a>
         </div>
       </div>
     </header>
     <main>
       <!--About  -->
       <section id="about-me">
-        <div class="section-container about">
+        <div class="section-container">
           <h2 class="section-head">About Me</h2>
-          <p>
-            I am a passionate web developer with a keen interest in creating
-            dynamic and responsive web applications. My journey in web
-            development has equipped me with the skills to build user-friendly
-            interfaces and robust back-end systems.
+          <div class="about_me_container">
+            <div class="about_me_img">
+              <img src="./images/AMP.jpg" alt="Portrait of Akinfemi" />
+            </div>
+            <div class="about_me_card">
+              <div class="about_me_details_container">
+                <div class="about_me_details">
+                  <img
+                    src="./images/icons8-badge-100.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <h3>Experience</h3>
+                  <p>1 year <br />Full-Stack Development</p>
+                </div>
+                <div class="about_me_details">
+                  <img
+                    src="./images/user-graduate-solid-full.svg"
+                    alt="Education icon"
+                    class="icon"
+                  />
+                  <h3>Education</h3>
+                  <p>B.A. Bachelors Degree<br />Philosophy</p>
+                </div>
+              </div>
+              <p class="about_me_text">
+                I am a passionate web developer with a keen interest in creating
+                dynamic and responsive web applications. My journey in web
+                development has equipped me with the skills to build
+                user-friendly interfaces and robust back-end systems.
 
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            modi minima quia voluptatem repellat expedita sunt, error autem
-            blanditiis non officia fugiat, vel tempora dolor optio illum.
-            Deleniti, molestias unde! Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Cupiditate distinctio itaque id voluptatum?
-            Doloremque iste corrupti cumque excepturi, alias nobis. Eos tempora
-            officia voluptates tempore? Debitis numquam perspiciatis accusantium
-            ducimus?
-          </p>
+                <br />
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus modi minima quia voluptatem repellat expedita sunt,
+                error autem blanditiis non officia fugiat, vel tempora dolor
+                optio illum. Deleniti, molestias unde! Lorem ipsum dolor sit
+                amet consectetur, adipisicing elit. Cupiditate distinctio itaque
+                id voluptatum? Doloremque iste corrupti cumque excepturi, alias
+                nobis. Eos tempora officia voluptates tempore? Debitis numquam
+                perspiciatis accusantium ducimus?
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Skills -->
       <section Id="skills">
         <div class="section-container skills">
           <h2 class="section-head">Skills</h2>
-          <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>React.js</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-          </ul>
+          <div class="skill_container">
+            <div class="skill_group_card">
+              <h2 class="skill_subtitle">
+                Frontend Development
+              </h2>
+                <div class="skill_lists"><div class="skill_info">
+                  <img src="./images/icons/html5-plain.png" alt="">
+                  <p class="info">HTML</p>
+                </div></div>
+            </div>
+            <div class="skill_group_card">
+              <h2 class="skill_subtitle">
+                Backend Development
+              </h2>
+                <div class="skill_lists">Node.js Express.js MongoDB</div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Project -->
@@ -128,3 +164,8 @@
     <script src="/script.js"></script>
   </body>
 </html>
+
+<!-- 
+            
+           
+   -->

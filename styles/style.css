@@ -192,7 +192,7 @@ nav {
   color: white;
   background-color: transparent;
   border: 2px solid green;
-  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.502);
 }
 
 .btn-primary:hover {
@@ -212,18 +212,63 @@ nav {
 .section-container {
   text-align: left;
   padding: 40px;
+  min-height: fit-content;
+  box-sizing: border-box;
 }
-.about {
+.about_me_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 100px;
+
+}
+
+.about_me_img{
+  height: 500px;
+  width: 400px;
+  border-radius: 5px;
+}
+.about_me_img img{
+  width: inherit  ;
+  height: inherit;
+  object-fit: cover;
+  border: 10px solid rgba(0, 128, 0, 0.499);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+.about_me_card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  /* min-height: 50vh; */
+  padding: 20px;
+  border-radius: 8px;
+  gap: 20px;
+  line-height: 1.3;
+  max-width: 900px;
+  align-self: flex-start;
+  align-items: center;
 }
-.about p {
-  font-size: 1rem;
-  padding: 0 70px;
+.about_me_text {
+  font-size: 1.2rem;
+  padding: 0 30px;
   text-align: justify;
-  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.about_me_details_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.about_me_details{
+ flex:1;
+ border: 2px solid rgba(0, 128, 0, 0.499);
+ border-radius: 2rem;
+ padding: 1.5rem;
+ text-align: center;
+ width: 400px;
+ max-width: 530px;
 }
 
 .section-head {
@@ -239,7 +284,7 @@ nav {
   display: block;
   width: 50px;
   height: 4px;
-  background-color: green;
+  background-color: #008000;
   margin-top: 8px;
   transition: width 0.4s ease;
 }
@@ -249,4 +294,45 @@ nav {
 
 .intro {
   line-height: 1.7;
+}
+
+.icon{
+  height: 2rem;
+}
+
+/* SKILL SECTION */
+
+.skill_container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  padding-top: 100px;
+  margin: 0 40px;
+}
+
+.skill_group_card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 900px;
+  height: 70vh;
+  max-width: 700px;
+  align-self: flex-start;
+  border: 2px solid rgba(0, 128, 0, 0.499);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.skill_subtitle{
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color:rgb(0, 128, 0 , .8) ;
+}
+
+.skill_list{
+  
 }
