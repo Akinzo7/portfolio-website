@@ -333,6 +333,86 @@ nav {
   color:rgb(0, 128, 0 , .8) ;
 }
 
-.skill_list{
-  
+.skill_lists{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill_info{
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.info{
+  text-align: center;
+}
+/* Footer */
+
+footer{
+  height: 100px;
+  background-color: #363636;
+}
+
+.footer_details{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+.fa_icons{
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+.fa_icons:hover{
+  color: green;
+  transition: color 0.3s ease;
+}
+
+/* Contact Form */
+
+.contact_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.contact_form form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact_form label{
+  font-weight: bold;
+}
+
+.contact_form input,
+.contact_form textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contact_form button{
+  padding: 10px 20px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
