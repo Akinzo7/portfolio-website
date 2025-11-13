@@ -33,22 +33,21 @@
 }
 
 @media screen and (max-width: 913px) {
-  header{
+  header {
     height: 60vh;
   }
 
-  .hero{
+  .hero {
     padding-top: 170px;
   }
 
   .skill_group_card {
     min-height: 680px;
   }
-footer{
+  footer {
     height: 15vh;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   header {
@@ -133,7 +132,6 @@ footer{
   }
   header {
     height: 83vh;
-    
   }
   .about_me_details_container {
     width: 100%;
@@ -155,10 +153,10 @@ footer{
   .footer_details p {
     font-size: 0.9rem;
   }
-}
-.skill_group_card{
-  padding: 1rem;
-  min-height: auto;
+  .skill_group_card {
+    padding: 1rem;
+    min-height: auto;
+  }
 }
 @media screen and (max-width: 401px) {
   .skill_info {

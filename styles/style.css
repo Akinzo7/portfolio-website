@@ -36,7 +36,7 @@ html {
 }
 header {
   background-color: #363636;
-  height: 70vh;
+  height: 83vh;
   padding-top: 10px;
 }
 nav {
@@ -320,7 +320,7 @@ position: fixed;
   padding: 1.5rem;
   border-radius: 8px;
   width: 900px;
-  height: 70vh;
+  min-height: 652px;
   max-width: 700px;
   align-self: flex-start;
   border: 2px solid rgba(0, 128, 0, 0.499);
