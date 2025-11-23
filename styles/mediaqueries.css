@@ -6,61 +6,55 @@
     display: flex;
   }
 
-  .hero {
-    padding-top: 50px;
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #363636;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 100;
   }
+
   .hero img {
     width: 300px;
     height: 300px;
   }
-  header {
-    height: 83vh;
-  }
+
   .about_me_container {
     flex-wrap: wrap;
   }
 
-  .skill_group_card {
-    height: auto;
-    flex: 1;
-    min-height: 652px;
-    width: 100%;
-    /* max-width: none; */
-  }
-  .skill_info {
-    min-width: 0;
+  .skill_info{
+    flex-basis: auto;
   }
 }
 
 @media screen and (max-width: 913px) {
-  header {
-    height: 60vh;
-  }
-
-  .hero {
-    padding-top: 170px;
-  }
-
-  .skill_group_card {
-    min-height: 680px;
-  }
+  
   footer {
     height: 15vh;
+  }
+
+  .skill_container{
+    flex-direction: column;
+    margin: 0;
+  }
+  .skill_group_card{
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+   
   }
 }
 
 @media screen and (max-width: 600px) {
-  header {
-    height: 80vh;
-    padding-bottom: 50px;
-  }
   .hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     height: auto;
-    padding-top: 50px;
   }
   .hero img {
     width: 200px;
@@ -69,7 +63,7 @@
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
   }
 
-  .intro h2,
+  .intro h2, .intro
   p {
     text-align: center;
   }
@@ -80,9 +74,7 @@
   .about_me_details_container {
     width: 100%;
   }
-  .skill_container {
-    padding-top: 50px;
-  }
+  
   .about_me_details {
     flex: 1;
     width: 100%;
@@ -92,22 +84,12 @@
     padding: 0;
   }
 
-  .skill_container {
-    flex-direction: column;
-    align-items: center;
-  }
+  
 
   .contact_form {
     padding-top: 50px;
   }
 
-  .skill_group_card {
-    width: 100%;
-    height: auto;
-  }
-  .skill_info {
-    min-width: 0;
-  }
   #message {
     min-height: 150px;
   }
@@ -121,18 +103,18 @@
   .footer_details {
     gap: 20px;
   }
+  .grid-container {
+    grid-template-columns: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 @media screen and (max-width: 431px) {
   .about_me_img {
     width: 200px;
     height: 300px;
   }
-  .hero {
-    padding-top: 70px;
-  }
-  header {
-    height: 83vh;
-  }
+
   .about_me_details_container {
     width: 100%;
     gap: 10px;
@@ -147,24 +129,9 @@
     min-width: 142px;
     min-height: 192px;
   }
-  .skill_container {
-    margin: 0;
-  }
-  .footer_details p {
-    font-size: 0.9rem;
-  }
-  .skill_group_card {
-    padding: 1rem;
-    min-height: auto;
-  }
+ 
 }
 @media screen and (max-width: 401px) {
-  .skill_info {
-    min-width: 100px;
-    font-size: 0.8rem;
-  }
-  .skill_info img {
-    width: 40px;
-    height: 40px;
-  }
+  
 }
+
