@@ -6,21 +6,21 @@ const projects = [
     stack: ["html", "css", "javascript"],
     stack_type: "frontend",
     progress: "ongoing",
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://akinzomedia.netlify.app/",
+    githubLink: "https://github.com/Akinzo7/portfolio-website",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "A structured, responsive portfolio website that demonstrates my capabilities in design, layout architecture, and front-end development while providing an easy way for recruiters to evaluate my work.",
   },
   {
     id: 2,
     title: "Weather App",
-    img: "./weather-app.png",
+    img: "./images/weather-app.png",
     stack_type: "backend",
     progress: "completed",
     stack: ["html", "css", "javascript", "api"],
     liveLink: "#",
     githubLink: "#",
-    description: "A simple weather app that fetches weather data from an API.",
+    description: "A Frontend Mentor–inspired weather app demonstrating my ability to implement API integration, state management, and responsive UI development based on a provided design system.",
   },
 ];
 
