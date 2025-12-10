@@ -18,9 +18,9 @@ const projects = [
     stack_type: "backend",
     progress: "completed",
     stack: ["html", "css", "javascript", "api"],
-    liveLink: "#",
-    githubLink: "#",
-    description: "A Frontend Mentor–inspired weather app demonstrating my ability to implement API integration, state management, and responsive UI development based on a provided design system.",
+    liveLink: "https://akinzoweatherapp.netlify.app/",
+    githubLink: "https://github.com/Akinzo7/weather-app-main",
+    description: "A Frontend Mentor-inspired weather app demonstrating my ability to implement API integration, state management, and responsive UI development based on a provided design system.",
   },
 ];
 

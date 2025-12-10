@@ -8,7 +8,7 @@ html {
   color: aliceblue;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
 .navbar-links a,
@@ -37,23 +37,22 @@ html {
 header {
   background-color: #363636;
   height: auto;
-  
 }
 
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-   height: 70px;
+  height: 70px;
   padding: 1.5rem;
 }
 
-nav.sticky{
-position: fixed;
+nav.sticky {
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #363636;
- 
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
@@ -167,7 +166,7 @@ position: fixed;
   justify-content: center;
   align-items: center;
   gap: 30px;
-   padding: 150px 0 100px 0 ;
+  padding: 150px 0 100px 0;
 }
 
 .hero img {
@@ -448,7 +447,7 @@ footer {
   grid-template-columns: repeat(auto-fit, 300px);
   grid-auto-flow: row;
   gap: 30px;
-   padding-top: 100px;
+  padding-top: 100px;
   margin: 0 40px;
 }
 .container {
@@ -538,33 +537,53 @@ footer {
   border: 0.2px solid gray;
 }
 
+.project_links {
+  text-align: center;
+  cursor: pointer;
+  flex: 1 1 80%;
+  border: 0.2px solid gray;
+  border-radius: 4px;
+}
+
+.project_links a {
+  text-decoration: none;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.project_links img {
+  margin-left: 5px;
+}
+
+.project_links:hover,
+.github_icon:hover {
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
 .project_display {
   display: flex;
   gap: 10px;
   padding-top: 0.5rem;
 }
 
-.project_display a:first-child {
-  padding: 0.5rem 1rem;
-  text-align: center;
-  cursor: pointer;
-  flex: 1 1 80%;
-  padding: 0.5rem 1rem;
-}
 .project_display a {
-  border-radius: 4px;
   text-decoration: none;
   color: #ccc;
-  border: 0.2px solid gray;
-  min-height: max-content;
-}
-.github_icon {
-  height: 2rem;
-  width: 2rem;
 }
 
-.github_icon img {
-  height: 100%;
-  object-fit: contain;
-  padding: 3px;
+.github_icon {
+  background-image: url(../Assets/github-mark-white.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  flex-basis: 20%;
+  border: 0.2px solid gray;
+  border-radius: 4px;
 }

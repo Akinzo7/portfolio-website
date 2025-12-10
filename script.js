@@ -25,21 +25,29 @@ window.toggleMenu = function toggleMenu() {
   const icon = document.querySelector(".hamburger-icon");
   menu.classList.toggle("open");
   icon.classList.toggle("open");
-}
+};
 
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector("nav");
   navbar.classList.toggle("sticky", window.scrollY > 200);
 });
 
-
-
 // Projects iteration
 
-let projectCardHTML="";
+let projectCardHTML = "";
 projects.forEach((project) => {
-    console.log(project);
-    const { id, title, img, stack,stack_type, progress, liveLink, githubLink, description } = project;
+  console.log(project);
+  const {
+    id,
+    title,
+    img,
+    stack,
+    stack_type,
+    progress,
+    liveLink,
+    githubLink,
+    description,
+  } = project;
 
   projectCardHTML += `
   <div class="container">
@@ -58,14 +66,13 @@ projects.forEach((project) => {
           </p>
         </div>
         <div class="project_stack">
-          ${stack.map(tech => `<p>${tech}</p>`).join('')}
+          ${stack.map((tech) => `<p>${tech}</p>`).join("")}
         </div>
         <div class="project_display">
-          <a href="${liveLink}">view live</a
-          ><a class="github_icon" href="${githubLink}"
+          <div class="project_links"><a href="${liveLink}" target="_blank">view live <img src="./Assets/right-arrow.png" alt="" /></a
+          ></div><a target="_blank" class="github_icon" href="${githubLink}"
             >
-            <img src="./Assets/github-mark-white.png" alt="" 
-          /></a>
+</a>
         </div>
       </div>
     </div>
@@ -73,4 +80,4 @@ projects.forEach((project) => {
 });
 
 const container = document.querySelector(".js-grid-container");
-container.innerHTML = projectCardHTML;  
+container.innerHTML = projectCardHTML;
