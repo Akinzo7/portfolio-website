@@ -24,10 +24,11 @@
   .about_me_container {
     flex-wrap: wrap;
   }
-
-  .skill_info{
-    flex-basis: auto;
+.skill_container{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
   }
+  
 }
 
 @media screen and (max-width: 913px) {
@@ -37,15 +38,10 @@
   }
 
   .skill_container{
-    flex-direction: column;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 0;
   }
-  .skill_group_card{
-    width: 100%;
-    max-width: none;
-    min-height: auto;
-   
-  }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -84,7 +80,10 @@
     padding: 0;
   }
 
-  
+  .skill_container{
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
 
   .contact_form {
     padding-top: 50px;

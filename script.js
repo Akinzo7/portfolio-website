@@ -57,7 +57,7 @@ projects.forEach((project) => {
       <div class="project">
         <div class="project_status">
           <div class="stack_type">${stack_type}</div>
-          <div class="project_progress">${progress}</div>
+          <div class="project_progress ${progress}">${progress}</div>
         </div>
         <div class="project_details">
           <h2 class="project_title">${title} </h2>
