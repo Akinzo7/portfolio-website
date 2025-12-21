@@ -33,6 +33,17 @@ const projects = [
     githubLink: "https://github.com/Akinzo7/weather-app-main",
     description: "A Frontend Mentor-inspired weather app demonstrating my ability to implement API integration, state management, and responsive UI development based on a provided design system.",
   },
+  {
+    id: 3,
+    title: "Simple coffee listing",
+    img: "./images/coffee-listing.jpg",
+    stack_type: "frontend",
+    progress: "completed",
+    stack: ["react", "tailwind", "api"],
+    liveLink: "https://simple-coffee-listing-sigma.vercel.app/",
+    githubLink: "https://github.com/Akinzo7/simple-coffee-listing",
+    description: "A coffee product listing application that fetches data from an API, displays coffee products with details like ratings and availability, and allows users to filter between all products and available products.",
+  },
  
 ];
 
