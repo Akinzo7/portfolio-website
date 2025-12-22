@@ -4,8 +4,8 @@ import projects from "./data/projects.js";
 
 const links = document.querySelectorAll(".navbar-links a, .menu-links a");
 links.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
     const targetId = link.getAttribute("href");
     const targetSection = document.querySelector(targetId);
 
@@ -20,13 +20,24 @@ links.forEach((link) => {
   });
 });
 
-window.toggleMenu = function toggleMenu() {
+// Hamburger menu
+
+function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 };
 
+function initializeHamburgerMenu() {
+  const hamburgerIcon = document.querySelector(".hamburger-icon");
+  if (hamburgerIcon) {
+    hamburgerIcon.addEventListener("click", toggleMenu);
+  }
+  
+}
+
+// Sticky navbar
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector("nav");
   navbar.classList.toggle("sticky", window.scrollY > 200);
@@ -51,8 +62,8 @@ projects.forEach((project) => {
 
   projectCardHTML += `
   <div class="container">
-     <div class="project_img">
-        <img src="${img}" alt="project of ${title}" />
+     <div class="project_img" style="background: #333;">
+        <img src="${img}" loading="lazy" alt="project of ${title}" />
       </div>
       <div class="project">
         <div class="project_status">
@@ -81,3 +92,9 @@ projects.forEach((project) => {
 
 const container = document.querySelector(".js-grid-container");
 container.innerHTML = projectCardHTML;
+
+function initialize() {
+  initializeHamburgerMenu();
+}
+
+document.addEventListener("DOMContentLoaded", initialize);

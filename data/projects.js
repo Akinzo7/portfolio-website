@@ -13,7 +13,7 @@ const projects = [
   {
     id: 2,
     title: "Professional Portfolio website",
-    img: "./images/portfolio-website.png",
+    img: "./images/portfolio-website.webp",
     stack: ["html", "css", "javascript"],
     stack_type: "frontend",
     progress: "ongoing",
@@ -25,7 +25,7 @@ const projects = [
   {
     id: 3,
     title: "Weather App",
-    img: "./images/weather-app.png",
+    img: "./images/weather-app.webp",
     stack_type: "backend",
     progress: "completed",
     stack: ["html", "css", "javascript", "api"],
@@ -34,9 +34,9 @@ const projects = [
     description: "A Frontend Mentor-inspired weather app demonstrating my ability to implement API integration, state management, and responsive UI development based on a provided design system.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Simple coffee listing",
-    img: "./images/coffee-listing.jpg",
+    img: "./images/coffee-listing.webp",
     stack_type: "frontend",
     progress: "completed",
     stack: ["react", "tailwind", "api"],
