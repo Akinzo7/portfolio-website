@@ -24,24 +24,27 @@
   .about_me_container {
     flex-wrap: wrap;
   }
-.skill_container{
+  .skill_container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: 0;
   }
-  
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
 }
 
 @media screen and (max-width: 913px) {
-  
   footer {
     height: 15vh;
   }
 
-  .skill_container{
+  .skill_container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 0;
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -59,8 +62,8 @@
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
   }
 
-  .intro h2, .intro
-  p {
+  .intro h2,
+  .intro p {
     text-align: center;
   }
   .about_me_container {
@@ -70,7 +73,7 @@
   .about_me_details_container {
     width: 100%;
   }
-  
+
   .about_me_details {
     flex: 1;
     width: 100%;
@@ -80,7 +83,7 @@
     padding: 0;
   }
 
-  .skill_container{
+  .skill_container {
     grid-template-columns: 1fr;
     margin: 0;
   }
@@ -108,29 +111,28 @@
     padding: 0;
   }
 
-.footer_details p{
-  font-size: 0.75rem;
-}
-@media screen and (max-width: 431px) {
-  .about_me_img {
-    width: 200px;
-    height: 300px;
+  .footer_details p {
+    font-size: 0.75rem;
   }
+  @media screen and (max-width: 431px) {
+    .about_me_img {
+      width: 200px;
+      height: 300px;
+    }
 
-  .about_me_details_container {
-    width: 100%;
-    gap: 10px;
+    .about_me_details_container {
+      width: 100%;
+      gap: 10px;
+    }
+    .about_me_card {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .about_me_details {
+      width: fit-content;
+      min-width: 142px;
+      min-height: 192px;
+    }
   }
-  .about_me_card {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .about_me_details {
-    width: fit-content;
-    min-width: 142px;
-    min-height: 192px;
-  }
- 
-}
 }

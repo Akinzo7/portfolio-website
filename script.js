@@ -27,14 +27,61 @@ function toggleMenu() {
   const icon = document.querySelector(".hamburger-icon");
   menu.classList.toggle("open");
   icon.classList.toggle("open");
-};
+}
 
 function initializeHamburgerMenu() {
   const hamburgerIcon = document.querySelector(".hamburger-icon");
   if (hamburgerIcon) {
     hamburgerIcon.addEventListener("click", toggleMenu);
   }
+}
+
+// Theme toggle
+function initializeThemeToggle() {
+  const savedTheme = localStorage.getItem("theme") || "dark-mode";
+  const body = document.body;
+
+  body.classList.add(savedTheme);
+  const themeToggles = document.querySelectorAll(".theme-toggle");
+
+  console.log(themeToggles  );
+   themeToggles.forEach(button => {
+    button.addEventListener("click", () => {
+      if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        localStorage.setItem("theme", "light-mode");
+        updateToggleIcon("light-mode");
+      } else {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark-mode");
+        updateToggleIcon("dark-mode");
+      }
+    });
+  });
+}
+function updateToggleIcon(theme) {
+  const nodeImg = document.querySelector('img[alt="nodejs icon"]');
+  const githubImg = document.querySelector('img[alt="github icon"]');
   
+  const themeButtons = document.querySelectorAll(".theme-toggle img");
+  
+  if (theme === "dark-mode") {
+    themeButtons.forEach(img => {
+      img.src = "./Assets/dark.png";
+      img.alt = "Dark Mode";
+    });
+    nodeImg.src = "./images/nodejs.png";
+    githubImg.src = "./images/github_white.png";
+  } else {
+    themeButtons.forEach(img => {
+      img.src = "./Assets/bright.png";
+      img.alt = "Light Mode";
+    });
+    nodeImg.src = "./images/NODE.png";
+    githubImg.src = "./images/github.png";
+  }
 }
 
 // Sticky navbar
@@ -95,6 +142,7 @@ container.innerHTML = projectCardHTML;
 
 function initialize() {
   initializeHamburgerMenu();
+  initializeThemeToggle();
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
