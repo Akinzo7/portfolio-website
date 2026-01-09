@@ -14,7 +14,6 @@ html {
   scrollbar-color: green #363636;
 }
 
-
 .navbar-links a,
 .navbar-links li,
 .logo a {
@@ -318,7 +317,7 @@ nav.sticky {
 
 .card {
   background-color: #ffffff07;
-  border:2px solid rgba(0, 128, 0, 0.499);
+  border: 2px solid rgba(0, 128, 0, 0.499);
   color: #fff;
   font-family: sans-serif;
   padding: 1rem;
@@ -449,9 +448,10 @@ footer {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  resize: vertical;
+  resize: none;
   font-size: 1rem;
   font-family: inherit;
+
 }
 
 .contact_form input:focus,
@@ -478,7 +478,7 @@ footer {
 }
 
 .contact_form_submit:hover {
-  background-color:  #0080007f;
+  background-color: #0080007f;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
   transition: all 0.3s ease;
 }
@@ -549,8 +549,8 @@ footer {
 }
 
 .project_progress.ongoing {
-  background-color:#7b330680 !important;
-  color:#ffd230;
+  background-color: #7b330680 !important;
+  color: #ffd230;
 }
 
 .project_title {
@@ -648,7 +648,7 @@ footer {
 }
 
 .theme-toggle {
-  background:#5f5e5e5a ;
+  background: #5f5e5e5a;
 
   border-radius: 50%;
   cursor: pointer;
@@ -662,7 +662,6 @@ footer {
 
 .theme-toggle:hover {
   background-color: #8f8d8d5a;
-
 }
 
 .light-mode {
@@ -737,17 +736,16 @@ footer {
   border: 1px solid #ccc;
 }
 
-
 .light-mode .github_icon {
- background-color: green;
+  background-color: green;
 }
 
 .light-mode .github_icon:hover {
   background-color: #0080007f;
 }
 
-.light-mode .project_links a{
-   color: green;
+.light-mode .project_links a {
+  color: green;
 }
 
 .light-mode .project_stack p {
@@ -811,7 +809,7 @@ footer {
   color: green;
 }
 
-.light-mode .tech_name p{
+.light-mode .tech_name p {
   color: #212121;
 }
 
@@ -825,4 +823,32 @@ footer {
   color: #bf4c00;
   background-color: #fff2c7 !important;
   border: solid 1px #e2e8f0;
+}
+
+/* Back to top */
+.back_to_top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+background: green;
+box-shadow:0 0 10px rgba(0,255,0,0.5);
+color: white;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1000;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+  50%{
+    opacity: .5;
+  }
 }

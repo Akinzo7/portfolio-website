@@ -1,5 +1,6 @@
 import projects from "../data/projects.js";
 import { initializeThemeToggle, updateToggleIcon, initialize as initializeShared } from "../components/toggleTheme.js";
+import initializeBackToTop from "../components/backToTop.js";
 // Smooth scrolling and active link highlighting
 
 const links = document.querySelectorAll(".navbar-links a, .menu-links a");
@@ -44,6 +45,8 @@ function initializeHamburgerMenu() {
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector("nav");
   navbar.classList.toggle("sticky", window.scrollY > 200);
+
+
 });
 
 // Projects iteration
@@ -99,6 +102,7 @@ container.innerHTML = projectCardHTML;
 function initialize() {
   initializeHamburgerMenu();
   initializeThemeToggle();
+  initializeBackToTop();
 }
 
 document.addEventListener("DOMContentLoaded", initialize);

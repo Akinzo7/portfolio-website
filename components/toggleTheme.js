@@ -1,3 +1,4 @@
+
 // shared.js - Fixed version
 export function initializeThemeToggle() {
   const savedTheme = localStorage.getItem("theme") || "dark-mode";
@@ -60,6 +61,7 @@ export function initialize() {
   const savedTheme = localStorage.getItem("theme") || "dark-mode";
   updateToggleIcon(savedTheme);
   initializeThemeToggle();
+  
 }
 
 // Optional: Add hamburger menu initialization for blog page

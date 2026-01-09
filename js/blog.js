@@ -1,5 +1,6 @@
 import { articles } from "../data/projects.js";
-import { initialize } from "../components/toggleTheme.js";
+import { initialize as initializeThemeToggle } from "../components/toggleTheme.js";
+import initializeBackToTop from "../components/backToTop.js";
 
 const container = document.getElementById("articles-container");
 
@@ -19,8 +20,15 @@ articles.forEach(article => {
       </div>
     </a>
   `;
-
-  container.innerHTML = articleCardHTML;
 });
+
+if(container){
+  container.innerHTML = articleCardHTML;
+}
+
+function initialize() {
+    initializeThemeToggle();
+    initializeBackToTop();
+}
 
 document.addEventListener("DOMContentLoaded", initialize);
