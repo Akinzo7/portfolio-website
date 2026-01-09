@@ -1,5 +1,10 @@
 import projects from "../data/projects.js";
-import { initializeThemeToggle, updateToggleIcon, initialize as initializeShared } from "../components/toggleTheme.js";
+import {
+  initializeThemeToggle,
+  initializeHamburgerMenu,
+  updateToggleIcon,
+  initialize as initializeShared,
+} from "../components/toggleTheme.js";
 import initializeBackToTop from "../components/backToTop.js";
 // Smooth scrolling and active link highlighting
 
@@ -23,37 +28,16 @@ links.forEach((link) => {
   });
 });
 
-
-// Hamburger menu
-
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
-
-function initializeHamburgerMenu() {
-  const hamburgerIcon = document.querySelector(".hamburger-icon");
-  if (hamburgerIcon) {
-    hamburgerIcon.addEventListener("click", toggleMenu);
-  }
-}
-
-
 // Sticky navbar
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector("nav");
   navbar.classList.toggle("sticky", window.scrollY > 200);
-
-
 });
 
 // Projects iteration
 
 let projectCardHTML = "";
 projects.forEach((project) => {
-  console.log(project);
   const {
     id,
     title,

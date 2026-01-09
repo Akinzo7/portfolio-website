@@ -66,10 +66,16 @@ export function initialize() {
 
 // Optional: Add hamburger menu initialization for blog page
 export function initializeHamburgerMenu() {
-  function toggleMenu() {
+  function toggleMenu(forceClose = false) {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
-    if (menu && icon) {
+
+    if (!menu || !icon) return;
+
+    if (forceClose) {
+      menu.classList.remove("open");
+      icon.classList.remove("open");
+    } else {
       menu.classList.toggle("open");
       icon.classList.toggle("open");
     }
@@ -77,6 +83,13 @@ export function initializeHamburgerMenu() {
 
   const hamburgerIcon = document.querySelector(".hamburger-icon");
   if (hamburgerIcon) {
-    hamburgerIcon.addEventListener("click", toggleMenu);
+    hamburgerIcon.addEventListener("click", () => toggleMenu());
   }
+
+  const menuLinks = document.querySelectorAll(".menu-links a");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      toggleMenu(true);
+    });
+  });
 }

@@ -99,15 +99,24 @@ nav.sticky {
 }
 
 .menu-links {
-  position: absolute;
-  top: 100%;
-
+  position: fixed;
+  top: 70px;
+  left: 0;
   right: 0;
+  bottom: 0;
   background-color: #363636;
-  width: fit-content;
+  width: 100%;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  z-index: 99;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links.open {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  width: 100%;
 }
 
 .menu-links a {
@@ -132,15 +141,7 @@ nav.sticky {
   margin-bottom: 20px;
 }
 
-.menu-links.open {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  max-height: 100vh;
-  width: 200px;
-  backdrop-filter: blur(100px);
-  right: -25px;
-}
+
 
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
