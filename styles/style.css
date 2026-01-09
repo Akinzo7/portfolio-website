@@ -10,7 +10,11 @@ html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  scrollbar-width: thin;
+  scrollbar-color: green #363636;
 }
+
+
 .navbar-links a,
 .navbar-links li,
 .logo a {
