@@ -1,6 +1,8 @@
 import { articles } from "../data/projects.js";
 import { initialize as initializeTheme, initializeHamburgerMenu } from "../components/toggleTheme.js";
 import initializeBackToTop from "../components/backToTop.js";
+import {updateToggleIcon} from "../components/toggleTheme.js";
+import getCurrentYear from "../components/getCurrentYear.js";
 
 const container = document.getElementById("articles-container");
 
@@ -49,10 +51,12 @@ function renderArticles() {
 }
 
 function initialize() {
-    initializeTheme();        // ← Changed this line
+    initializeTheme();        
     initializeHamburgerMenu();
     initializeBackToTop();
     renderArticles();
+    updateToggleIcon(localStorage.getItem("theme") || "dark-mode");
+    getCurrentYear();
 }
 
 document.addEventListener("DOMContentLoaded", initialize);

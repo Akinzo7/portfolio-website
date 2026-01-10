@@ -6,6 +6,7 @@ import {
   initialize as initializeShared,
 } from "../components/toggleTheme.js";
 import initializeBackToTop from "../components/backToTop.js";
+import getCurrentYear from "../components/getCurrentYear.js";
 // Smooth scrolling and active link highlighting
 
 const links = document.querySelectorAll(".navbar-links a, .menu-links a");
@@ -33,6 +34,7 @@ window.addEventListener("scroll", () => {
   const navbar = document.querySelector("nav");
   navbar.classList.toggle("sticky", window.scrollY > 200);
 });
+
 
 // Projects iteration
 
@@ -87,6 +89,8 @@ function initialize() {
   initializeHamburgerMenu();
   initializeThemeToggle();
   initializeBackToTop();
+  updateToggleIcon(localStorage.getItem("theme") || "dark-mode");
+  getCurrentYear();
 }
 
 document.addEventListener("DOMContentLoaded", initialize);

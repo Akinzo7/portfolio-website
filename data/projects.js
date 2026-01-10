@@ -44,6 +44,17 @@ const projects = [
     githubLink: "https://github.com/Akinzo7/simple-coffee-listing",
     description: "A coffee product listing application that fetches data from an API, displays coffee products with details like ratings and availability, and allows users to filter between all products and available products.",
   },
+  {
+    id: 5,
+    title: "Movie Search App",
+    img: "./images/film-flow.webp",
+    stack_type: "frontend",
+    progress: "completed",
+    stack: ["react", "tailwind", "api"],
+    liveLink: "https://film-flow-six.vercel.app/",
+    githubLink: "https://github.com/Akinzo7/film-flow",
+    description: "A movie search application that fetches data from an API, displays movie details, and allows users to search for movies.",
+  },
  
 ];
 
