@@ -1,5 +1,5 @@
 import { articles } from "../data/projects.js";
-import { initialize as initializeThemeToggle,initializeHamburgerMenu } from "../components/toggleTheme.js";
+import { initialize as initializeTheme, initializeHamburgerMenu } from "../components/toggleTheme.js";
 import initializeBackToTop from "../components/backToTop.js";
 
 const container = document.getElementById("articles-container");
@@ -49,7 +49,7 @@ function renderArticles() {
 }
 
 function initialize() {
-    initializeThemeToggle();
+    initializeTheme();        // ← Changed this line
     initializeHamburgerMenu();
     initializeBackToTop();
     renderArticles();
