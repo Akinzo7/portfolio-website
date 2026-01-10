@@ -50,7 +50,7 @@ const projects = [
     img: "./images/film-flow.webp",
     stack_type: "frontend",
     progress: "completed",
-    stack: ["react", "tailwind", "api"],
+    stack: ["react", "tailwind", "api", "router"],
     liveLink: "https://film-flow-six.vercel.app/",
     githubLink: "https://github.com/Akinzo7/film-flow",
     description: "A movie search application that fetches data from an API, displays movie details, and allows users to search for movies.",
