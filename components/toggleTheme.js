@@ -27,33 +27,31 @@ export function initializeThemeToggle() {
 export function updateToggleIcon(theme) {
   const themeButtons = document.querySelectorAll(".theme-toggle img");
   
-  // Determine if we're on blog.html or index.html
-  const isBlogPage = window.location.pathname.includes("blog.html");
   
   if (theme === "dark-mode") {
     themeButtons.forEach(img => {
       // Use correct path based on current page
-      img.src = isBlogPage ? "../assets/dark.png" : "./assets/dark.png";
+      img.src = "/assets/dark.png";
       img.alt = "Dark Mode";
     });
     
     // Update other icons only if they exist (on index.html)
     const nodeImg = document.querySelector('img[alt="nodejs icon"]');
     const githubImg = document.querySelector('img[alt="github icon"]');
-    if (nodeImg) nodeImg.src = "./images/nodejs.png";
-    if (githubImg) githubImg.src = "./images/github_white.png";
+    if (nodeImg) nodeImg.src = "/images/nodejs.png";
+    if (githubImg) githubImg.src = "/images/github_white.png";
     
   } else {
     themeButtons.forEach(img => {
-      img.src = isBlogPage ? "../assets/bright.png" : "./assets/bright.png";
+      img.src = "/assets/bright.png";
       img.alt = "Light Mode";
     });
     
     // Update other icons only if they exist (on index.html)
     const nodeImg = document.querySelector('img[alt="nodejs icon"]');
     const githubImg = document.querySelector('img[alt="github icon"]');
-    if (nodeImg) nodeImg.src = "./images/NODE.png";
-    if (githubImg) githubImg.src = "./images/github.png";
+    if (nodeImg) nodeImg.src = "/images/NODE.png";
+    if (githubImg) githubImg.src = "/images/github.png";
   }
 }
 
