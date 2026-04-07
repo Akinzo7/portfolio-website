@@ -4,8 +4,6 @@ import initializeBackToTop from "../components/backToTop.js";
 import {updateToggleIcon} from "../components/toggleTheme.js";
 import getCurrentYear from "../components/getCurrentYear.js";
 
-const container = document.getElementById("articles-container");
-
 
 function renderArticles() {
   const container = document.getElementById("articles-container");

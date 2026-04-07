@@ -61,6 +61,7 @@ main {
   flex: 1;
   font-size: 0.875rem;
   margin-bottom: 12px;
+  -webkit-line-clamp: 3;
   line-clamp: 3;
   box-orient: vertical;
   display: -webkit-box;
