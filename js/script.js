@@ -39,7 +39,7 @@ window.addEventListener("scroll", () => {
 // Projects iteration
 
 let projectCardHTML = "";
-projects.forEach((project) => {
+projects.splice(0, 4).forEach((project) => {
   const {
     id,
     title,
