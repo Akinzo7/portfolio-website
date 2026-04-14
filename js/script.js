@@ -7,6 +7,7 @@ import {
 } from "../components/toggleTheme.js";
 import initializeBackToTop from "../components/backToTop.js";
 import getCurrentYear from "../components/getCurrentYear.js";
+import initializeAnimations from "../components/animations.js";
 // Smooth scrolling and active link highlighting
 
 const links = document.querySelectorAll(".navbar-links a, .menu-links a");
@@ -89,6 +90,7 @@ function initialize() {
   initializeHamburgerMenu();
   initializeThemeToggle();
   initializeBackToTop();
+  initializeAnimations();
   updateToggleIcon(localStorage.getItem("theme") || "dark-mode");
   getCurrentYear();
 }

@@ -1,0 +1,223 @@
+/* ANIMATIONS */
+
+:root {
+  --animation-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --animation-duration: 0.7s;
+  --animation-offset: 20px;
+}
+
+/* Hero load sequence */
+.js-animations-enabled .hero-load-item {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+}
+
+.js-animations-enabled .hero-load-photo {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.js-animations-enabled .hero.hero-is-ready .hero-load-item {
+  animation: heroFadeUp 0.72s var(--animation-ease) forwards;
+  animation-delay: var(--hero-delay, 0s);
+}
+
+.js-animations-enabled .hero.hero-is-ready .hero-load-photo {
+  animation: heroPhotoPop 0.85s var(--animation-ease) forwards;
+  animation-delay: var(--hero-photo-delay, 0.35s);
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroPhotoPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scroll-triggered reveals */
+.js-animations-enabled .animate-hidden,
+.js-animations-enabled .animate-visible {
+  transition:
+    opacity var(--animation-duration) var(--animation-ease) var(--stagger-delay, 0s),
+    transform var(--animation-duration) var(--animation-ease) var(--stagger-delay, 0s);
+}
+
+.js-animations-enabled .animate-hidden {
+  opacity: 0;
+  transform: translate3d(0, var(--animation-offset), 0);
+  will-change: transform, opacity;
+}
+
+.js-animations-enabled .animate-hidden.animate-from-left {
+  transform: translate3d(-26px, 0, 0);
+}
+
+.js-animations-enabled .animate-hidden.animate-from-right {
+  transform: translate3d(26px, 0, 0);
+}
+
+.js-animations-enabled .animate-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Nav interactions */
+.navbar-links a,
+.menu-links a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active,
+.menu-links a:hover,
+.menu-links a.active {
+  border-bottom: none !important;
+}
+
+.navbar-links a::after,
+.menu-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: #008000;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.32s var(--animation-ease);
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after,
+.menu-links a:hover::after,
+.menu-links a.active::after {
+  transform: scaleX(1);
+}
+
+nav.sticky {
+  animation: stickyNavIn 0.38s var(--animation-ease);
+}
+
+@keyframes stickyNavIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -14px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Project card hover */
+.container {
+  transition:
+    transform 0.35s var(--animation-ease),
+    box-shadow 0.35s var(--animation-ease),
+    border-color 0.35s var(--animation-ease);
+  will-change: transform;
+}
+
+.container:hover {
+  transform: translate3d(0, -10px, 0) scale(1.01);
+  border-color: rgba(16, 185, 129, 0.85);
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.28),
+    0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.container .project_img img {
+  transition: transform 0.55s var(--animation-ease);
+  transform-origin: center;
+}
+
+.container:hover .project_img img {
+  transform: scale(1.08);
+}
+
+/* Skill bar easing */
+.skill-level {
+  transition: width 1.1s var(--animation-ease);
+}
+
+/* Back to top icon rotate feedback */
+.back_to_top i {
+  transition: transform 0.45s var(--animation-ease);
+}
+
+.back_to_top:hover i {
+  transform: rotate(360deg);
+}
+
+/* Theme toggle icon feedback */
+.theme-toggle img.theme-icon-spin {
+  animation: themeIconSpin 0.45s ease;
+}
+
+@keyframes themeIconSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Section heading underline reveal */
+.js-animations-enabled .section-head::after {
+  width: 0;
+}
+
+.js-animations-enabled .section-head.heading-visible::after {
+  width: 50px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .animate-hidden,
+  .hero-load-item,
+  .hero-load-photo {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .section-head::after {
+    width: 50px !important;
+  }
+}

@@ -6,6 +6,7 @@ import {
 } from "../components/toggleTheme.js";
 import initializeBackToTop from "../components/backToTop.js";
 import getCurrentYear from "../components/getCurrentYear.js";
+import initializeAnimations from "../components/animations.js";
 
 let projectCardHTML = "";
 
@@ -54,6 +55,7 @@ function initialize() {
   initializeHamburgerMenu();
   initializeThemeToggle();
   initializeBackToTop();
+  initializeAnimations();
   updateToggleIcon(localStorage.getItem("theme") || "dark-mode");
   getCurrentYear();
 }
