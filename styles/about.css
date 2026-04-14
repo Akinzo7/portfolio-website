@@ -1,0 +1,454 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  height: 70px;
+}
+
+main {
+  flex: 1;
+}
+
+.about_page_container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Page header */
+.about_page_header {
+  text-align: center;
+}
+
+.about_page_subtitle {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Divider */
+.about_divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+}
+
+/* Top layout */
+.about_top_layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Profile card */
+.about_profile_card {
+  flex: 1;
+  background-color: #ffffff07;
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.about_profile_img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(0, 128, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.about_profile_name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.about_profile_role {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.about_profile_meta {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.about_meta_item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.about_meta_item i {
+  color: green;
+  width: 16px;
+}
+
+.about_profile_social {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Summary card */
+.about_summary_card {
+  flex: 2;
+  background-color: #ffffff07;
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.7;
+}
+
+.about_summary_heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.about_summary_card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Career Highlights */
+.career_highlights {
+  background-color: #ffffff07;
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.career_highlights_heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.career_stats_top,
+.career_stats_bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.career_stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.career_stat_number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: green;
+}
+
+.career_stat_number_white {
+  font-size: 2rem;
+  font-weight: 700;
+  color: aliceblue;
+}
+
+.career_stat_label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Section headings */
+.about_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about_section_heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about_section_heading i {
+  color: green;
+}
+
+/* Experience */
+.experience_card {
+  background-color: #ffffff07;
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.6;
+}
+
+.experience_card_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience_title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.experience_company {
+  color: green;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.experience_meta {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.experience_date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.experience_description {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.experience_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience_tags span {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Education */
+.education_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.education_card {
+  background-color: #ffffff07;
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  line-height: 1.6;
+}
+
+.education_degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.education_field {
+  color: green;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.education_school {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.education_date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  opacity: 0.6;
+}
+
+.education_description {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* Certifications */
+.cert_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cert_card {
+  background-color: #ffffff07;
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  line-height: 1.6;
+}
+
+.cert_badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+
+.cert_badge_project {
+  background-color: rgba(0, 128, 0, 0.2);
+  color: rgb(129, 240, 169);
+  border: 1px solid rgba(0, 128, 0, 0.4);
+}
+
+.cert_badge_skill {
+  background-color: rgba(0, 100, 200, 0.2);
+  color: #93c5fd;
+  border: 1px solid rgba(0, 100, 200, 0.4);
+}
+
+.cert_title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cert_issuer {
+  color: green;
+  font-size: 0.875rem;
+}
+
+.cert_date {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.cert_description {
+  font-size: 0.875rem;
+  opacity: 0.75;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .cert_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .career_stats_top,
+  .career_stats_bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about_top_layout {
+    flex-direction: column;
+  }
+
+  .about_profile_card {
+    width: 100%;
+  }
+
+  .education_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience_card_top {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_page_container {
+    padding: 40px 20px;
+  }
+
+  .cert_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career_stats_top,
+  .career_stats_bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Light mode */
+.light-mode .about_profile_card,
+.light-mode .about_summary_card,
+.light-mode .career_highlights,
+.light-mode .experience_card,
+.light-mode .education_card,
+.light-mode .cert_card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 128, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .about_summary_card p,
+.light-mode .experience_description,
+.light-mode .education_description,
+.light-mode .cert_description {
+  color: #212121;
+}
+
+.light-mode .about_divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .career_stat_number_white {
+  color: #212121;
+}
+
+.light-mode .experience_tags span {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #212121;
+}
+.cert_badge_cert {
+  background-color: rgba(180, 100, 0, 0.2);
+  color: #fcd34d;
+  border: 1px solid rgba(180, 100, 0, 0.4);
+}
