@@ -258,6 +258,27 @@ nav.sticky {
   box-sizing: border-box;
 }
 
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.projects-page main {
+  flex: 1;
+}
+
+.projects-page .section-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 56px 40px 72px;
+}
+
+.projects-page .section-head {
+  margin-bottom: 3rem;
+}
+
 
 
 .section-head {
@@ -545,11 +566,17 @@ footer {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-auto-flow: row;
   gap: 30px;
-  padding-top: 100px;
-  margin: 0 40px;
+  padding-top: 0;
+  margin: 0;
+}
+
+.projects-page .container {
+  height: 100%;
+  min-width: 0;
+  background-color: #ffffff07;
 }
 .container {
   display: flex;
@@ -578,6 +605,8 @@ footer {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: block;
+  object-fit: cover;
 }
 
 .project_status {
@@ -615,6 +644,22 @@ footer {
   padding: 0.5rem 0;
   font-weight: 700;
   font-family: sans-serif;
+}
+
+.projects-page .project_status {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.projects-page .project_details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.projects-page .project_info {
+  color: #d5dfe9;
+  font-size: 0.95rem;
 }
 
 .container:hover .project_title {
@@ -682,6 +727,13 @@ footer {
   padding-top: 0.5rem;
 }
 
+.projects-page .project_display {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 56px;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+
 .project_display a {
   text-decoration: none;
   color: #ccc;
@@ -696,6 +748,16 @@ footer {
   flex-basis: 20%;
   border: 0.2px solid gray;
   border-radius: 4px;
+}
+
+.projects-page .project_links,
+.projects-page .github_icon {
+  min-height: 48px;
+}
+
+.projects-page .github_icon {
+  flex-basis: auto;
+  background-size: 1.25rem;
 }
 
 /* Theme toggle */
